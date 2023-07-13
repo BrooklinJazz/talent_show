@@ -25,7 +25,9 @@ This project is for the students, graduates, and community members of DockYard A
 8. **Make a Pull Request (PR):** Go back to your forked repository on Github and click on "New pull request". On the next page, select your branch from the dropdown menu and confirm your changes. Then click on "Create pull request". Please provide a comprehensive description of the changes you've made.
 
 ## What Happens Next?
-After you've submitted your pull request, the maintainers of the DockYard Academy's Talent Show app will review your changes. They may suggest some edits, improvements or clarification. 
+After you've submitted your pull request, the maintainers of the DockYard Academy's Talent Show app will review your changes. They may suggest some edits, improvements or clarification.
+
+We also have a CI system that will run tests on your PR. Make sure these tests pass.
 
 Thank you for your interest in contributing to the DockYard Academy's Talent Show app. We look forward to your contribution!
 
