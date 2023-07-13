@@ -5,7 +5,7 @@ defmodule TalentShow.MixProject do
     [
       app: :talent_show,
       version: "0.1.0",
-      elixir: "~> 1.14",
+      elixir: "~> 1.15",
       elixirc_paths: elixirc_paths(Mix.env()),
       start_permanent: Mix.env() == :prod,
       aliases: aliases(),
@@ -32,6 +32,7 @@ defmodule TalentShow.MixProject do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
+      # Phoenix Default Deps
       {:phoenix, "~> 1.7.6"},
       {:phoenix_ecto, "~> 4.4"},
       {:ecto_sql, "~> 3.10"},
@@ -49,7 +50,9 @@ defmodule TalentShow.MixProject do
       {:telemetry_poller, "~> 1.0"},
       {:gettext, "~> 0.20"},
       {:jason, "~> 1.2"},
-      {:plug_cowboy, "~> 2.5"}
+      {:plug_cowboy, "~> 2.5"},
+      # Project Specific Deps
+      {:credo, "~> 1.7", only: [:dev, :test], runtime: false}
     ]
   end
 
