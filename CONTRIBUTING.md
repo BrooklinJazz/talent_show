@@ -31,5 +31,9 @@ We also have a CI system that will run tests on your PR. Make sure these tests p
 
 Thank you for your interest in contributing to the DockYard Academy's Talent Show app. We look forward to your contribution!
 
+## Figma Designs
+
+Some features require creating a design, or already have an established design. See our [Figma Document](https://www.figma.com/file/Sl07QmvPqSf10IEktckl1E/Talent-Show?type=design&node-id=1%3A5&mode=design&t=hqNQuzSOKUnO4NPS-1).
+
 ## Questions?
 If you have any questions or need further clarification, feel free to reach out. Contact us or open an issue on Github. We're here to help!
