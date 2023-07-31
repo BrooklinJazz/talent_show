@@ -10,7 +10,7 @@ defmodule TalentShowWeb.TalentControllerTest do
   end
 
   test "GET /list_talent display student information", %{conn: conn} do
-    with_mock File, [read!: fn _ -> Jason.encode!([%{name: "John Doe"}, %{name: "Jane Doe"}]) end] do
+    with_mock File, read!: fn _ -> Jason.encode!([%{name: "John Doe"}, %{name: "Jane Doe"}]) end do
       conn = get(conn, ~p"/list_talent")
       response = html_response(conn, 200)
 
