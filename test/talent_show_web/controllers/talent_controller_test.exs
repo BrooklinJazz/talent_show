@@ -1,15 +1,8 @@
 defmodule TalentShowWeb.TalentControllerTest do
-  use TalentShowWeb.ConnCase, async: true
+  use TalentShowWeb.ConnCase, async: false
   doctest TalentShowWeb.TalentController
-  @test_json "./assets/js/students_test.json"
 
-  setup do
-    File.write!(@test_json, Jason.encode!([%{name: "John Doe"}, %{name: "Jane Doe"}]))
-
-    on_exit(fn ->
-      File.rm!(@test_json)
-    end)
-  end
+  import Mock
 
   test "GET /list_talent", %{conn: conn} do
     conn = get(conn, ~p"/list_talent")
@@ -17,10 +10,12 @@ defmodule TalentShowWeb.TalentControllerTest do
   end
 
   test "GET /list_talent display student information", %{conn: conn} do
-    conn = get(conn, ~p"/list_talent")
-    response = html_response(conn, 200)
+    with_mock File, [read!: fn _ -> Jason.encode!([%{name: "John Doe"}, %{name: "Jane Doe"}]) end] do
+      conn = get(conn, ~p"/list_talent")
+      response = html_response(conn, 200)
 
-    assert response =~ "John Doe"
-    assert response =~ "Jane Doe"
+      assert response =~ "John Doe"
+      assert response =~ "Jane Doe"
+    end
   end
 end

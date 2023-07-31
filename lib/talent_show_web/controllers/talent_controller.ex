@@ -1,9 +1,7 @@
 defmodule TalentShowWeb.TalentController do
   use TalentShowWeb, :controller
 
-  @json_path if Mix.env() == :test,
-               do: "./assets/js/students_test.json",
-               else: "./assets/js/students.json"
+  @json_path "./assets/js/students.json"
 
   def list_talent(conn, _params) do
     students =
