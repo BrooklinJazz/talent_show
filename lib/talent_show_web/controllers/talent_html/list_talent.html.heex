@@ -1,1 +1,7 @@
 DockYard Academy Graduates <%= inspect(@students) %>
+<.simple_form :let={f} for={%{}} method="get" action={~p"/list_talent/"}>
+  <.input field={f[:search]} label="Search" />
+  <:actions>
+    <.button>Search</.button>
+  </:actions>
+</.simple_form>

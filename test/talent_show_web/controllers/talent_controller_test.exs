@@ -18,4 +18,14 @@ defmodule TalentShowWeb.TalentControllerTest do
       assert response =~ "Jane Doe"
     end
   end
+
+  test "GET /list_talent filter student information", %{conn: conn} do
+    with_mock File, read!: fn _ -> Jason.encode!([%{name: "John Doe"}, %{name: "Jane Doe"}]) end do
+      conn = get(conn, ~p"/list_talent?search=John")
+      response = html_response(conn, 200)
+
+      assert response =~ "John Doe"
+      refute response =~ "Jane Doe"
+    end
+  end
 end
