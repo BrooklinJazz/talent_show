@@ -7,7 +7,8 @@ defmodule TalentShowWeb.TalentController do
     students =
       File.read!(@json_path)
       |> Jason.decode!()
-      |> Enum.filter(fn student -> student["name"] =~ search end)
+      |> Enum.filter(fn student -> String.downcase(student["name"]) =~ String.downcase(search) end)
+
 
     render(conn, :list_talent, layout: false, students: students)
   end
