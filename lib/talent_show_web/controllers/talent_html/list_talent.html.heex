@@ -5,3 +5,18 @@ DockYard Academy Graduates <%= inspect(@students) %>
     <.button>Search</.button>
   </:actions>
 </.simple_form>
+
+<%!-- container that contains all the cards --%>
+<div class="grid gap-4 grid-cols-4  place-content-center">
+  <div class="aspect-square rounded-[2rem] bg-blue-500 w-full flex-col text-center">
+
+  <p class="px-4 bg-red-400 ">Name</p>
+  <p class="px-4 ">Photo</p>
+  <p class="px-4 ">Tag line for each student</p>
+  
+  </div>
+  <div class="aspect-square border-2 border-red-500 rounded-[2rem] bg-blue-500 w-full shrink"><p>HI THERE!!</p></div>
+  <div class="aspect-square border-2 border-red-500 rounded-[2rem] bg-blue-500 w-full shrink"><p>HI THERE!!</p></div>
+  <div class="aspect-square border-2 border-red-500 rounded-[2rem] bg-blue-500 w-full shrink"><p>HI THERE!!</p></div>
+  <div class="aspect-square border-2 border-red-500 rounded-[2rem] bg-blue-500 w-full shrink"><p>HI THERE!!</p></div>
+</div>
