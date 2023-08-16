@@ -1,0 +1,19 @@
+DockYard Academy Graduates <%= inspect(@students) %>
+<.simple_form :let={f} for={%{}} method="get" action={~p"/list_talent/"}>
+  <.input field={f[:search]} label="Search" />
+  <:actions>
+    <.button>Search</.button>
+  </:actions>
+</.simple_form>
+
+<%!-- container that contains all the cards --%>
+<div class="grid gap-4 grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 place-content-center">
+
+  <%= for student <- @students do %>
+    <div class="aspect-square rounded-[2rem] bg-blue-500 w-full flex-col text-center">
+      <p class="px-4 bg-red-400 "><%= student["name"] %></p>
+      <p class="px-4 ">Photo</p>
+      <p class="px-4 ">Tag line for each student</p>
+    </div>
+  <% end %>
+</div>

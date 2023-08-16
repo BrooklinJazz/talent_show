@@ -16,3 +16,7 @@ Ready to run in production? Please [check our deployment guides](https://hexdocs
   * Docs: https://hexdocs.pm/phoenix
   * Forum: https://elixirforum.com/c/phoenix-forum
   * Source: https://github.com/phoenixframework/phoenix
+
+## Contributing
+
+See our [Contributing Guide](https://github.com/BrooklinJazz/talent_show/blob/main/CONTRIBUTING.md) for information on how to contribute to the project.

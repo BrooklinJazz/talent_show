@@ -12,6 +12,15 @@ module.exports = {
     "../lib/*_web/**/*.*ex"
   ],
   theme: {
+    screens:{
+      'xs': '450px',
+      // => @media (min-width: 450px) { ... },
+      'sm': '640px',
+      'md': '768px',
+      'lg': '1024px',
+      'xl': '1280px',
+      '2xl': '1536px',
+    },
     extend: {
       colors: {
         brand: "#FD4F00",

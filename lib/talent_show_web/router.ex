@@ -18,6 +18,15 @@ defmodule TalentShowWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :home
+
+    get "/list_talent", TalentController, :list_talent
+
+    get "/profile", TalentController, :profile
+
+    # Router -> create the route
+    # Controller -> create the action (function)
+    # Component -> embed the templates folder
+    # Template -> create the template/html
   end
 
   # Other scopes may use custom stacks.
